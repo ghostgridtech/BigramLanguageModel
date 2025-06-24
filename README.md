@@ -17,32 +17,15 @@ This is a minimal and educational implementation of a language model to demonstr
 
 🧪 Includes validation and loss estimation for basic evaluation
 
-Setup Instructions
-
-Clone the repository
-Change directory and get into the folder
-(Optional) Create a virtual environment(more compatible with python version 10 or 11)
-Install dependencies(pip install torch)
-
-🧪 Sample Output
-
-Here’s a sample of what the model generated after training on The Wizard of Oz:
-A!OUg3304Dn:Xpb
-y-iTg!Ze5O8yW(6y-9tYKFwy!M5(]9T3lEs?oGkflH
-nv_66N'A6RDL):B-9V[[-w;p9uDxh4;UBt0
-2L53ZxnF?);zVYlH"tijOUq&OGecL)(6?cVk.-fr
-...
-nthN
-ngYC-&BEJBcp?)ZVt;7O]crvCV1GD6R[7vir️ vVDIYVYM2hier oiWIn gQPich8'S)kQ62UD&VEU56k "267CKdo pFIMor tiTouS]cJ_lyBwz' Pb
-
-This output is gibberish — and that’s expected! The model is a simple bigram model that only sees one character at a time and has no memory or understanding of words or structure.
-
 
 How the Bigram Model Works
 
 The model uses a single nn.Embedding layer of shape (vocab_size, vocab_size)
+
 Each character (token) is mapped to a vector that scores all possible next characters
+
 During training, it uses cross-entropy loss to adjust these scores
+
 During generation, it samples from the probability distribution of the next character
 
  Want to Go Further?
